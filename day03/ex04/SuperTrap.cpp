@@ -18,6 +18,15 @@ SuperTrap::SuperTrap(SuperTrap const &c)
 
 SuperTrap &SuperTrap::operator=(SuperTrap const &c)
 {
+	this->_name = c._name;
+	this->_hp = c._hp;
+	this->_maxhp = c._maxhp;
+	this->_nrg = c._nrg;
+	this->_maxnrg = c._maxnrg;
+	this->_lvl = c._lvl;
+	this->_meleedmg = c._meleedmg;
+	this->_rangedmg = c._rangedmg;
+	this->_armor = c._armor;
 	return (*this);
 }
 

@@ -9,5 +9,10 @@ int main()
 {
 
 	SuperTrap boby("scharzy");
+	FragTrap ok("S");
+	ScavTrap a("a");
 
+	a.meleeAttack("slt");
+	ok.meleeAttack("slt");
+	boby.meleeAttack("e");
 }
