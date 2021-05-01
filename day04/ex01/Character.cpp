@@ -1,6 +1,6 @@
 #include "Character.hpp"
 
-Character::Character(std::string const &name) : _name(name), _ap(40), _weap(NULL)
+Character::Character(std::string const &name) : _name(name), _weap(NULL), _ap(40)
 {
 
 }

@@ -18,5 +18,4 @@ int main()
 	bob.vaulthunter_dot_exe("bobo");
 	bob.vaulthunter_dot_exe("bobo");
 	bob.vaulthunter_dot_exe("bobo");
-
 }

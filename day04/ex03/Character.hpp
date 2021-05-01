@@ -1,13 +1,18 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include "Amateria.hpp"
-#include <iostream>
-#include <string>
+
+# include <string>
+
+# include "Ice.hpp"
+# include "Cure.hpp"
+# include "Amateria.hpp"
+# include "ICharacter.hpp"
 
 class Character : public ICharacter
 {
 
+	
 	public :
 
 	Character(std::string const &n);
@@ -19,10 +24,14 @@ class Character : public ICharacter
 	void equip(Amateria *m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
+		Amateria *getAmateria(int idx) const;
 
 	private :
 
+	void deleteAll(void);
 	std::string _name;
+	Amateria *_inv[4];
+	int _count;
 
 };
 

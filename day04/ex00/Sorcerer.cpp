@@ -1,6 +1,6 @@
 #include "Sorcerer.hpp"
 
-Sorcerer::Sorcerer(std::string n, std::string t) : _name(n), _type(t)
+Sorcerer::Sorcerer(std::string n, std::string t) : _type(t), _name(n)
 {
 	std::cout << this->_name << ", " << this->_type << ", is born!" << std::endl;
 }

@@ -17,6 +17,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &c)
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &c)
 {
+	(void)c;
 	return (*this);
 }
 

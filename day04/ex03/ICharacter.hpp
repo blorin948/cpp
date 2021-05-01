@@ -1,9 +1,10 @@
 #ifndef ICHARACTER_HPP
-#define ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 #include "Amateria.hpp"
-#include <iostream>
 #include <string>
+
+class Amateria;
 
 class ICharacter
 {

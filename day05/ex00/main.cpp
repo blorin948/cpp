@@ -2,15 +2,52 @@
 
 int main()
 {
+	Bureaucrat john("John", 27);
+	int i = john.getGrade();
+	std::cout << john << std::endl;
+	std::cout << "-- Setting grade to 151 --" << std::endl;
 	try
 	{
-		Bureaucrat t("joe", 2);
-		t.incr();
-		std::cout << t;
+		while (i < 151)
+		{
+			john.decr();
+			i++;
+		}
 	}
-	catch(const std::exception& e)
+	catch(std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << "Error when setting grade: " << e.what() << "." << std::endl;
 	}
-	
+	std::cout << john << std::endl;
+	std::cout << "-- Setting grade to 1. --" << std::endl;
+	try
+	{
+		while (john.getGrade() > 1)
+		john.incr();
+	}
+	catch(std::exception &e)
+	{
+		std::cout << "Error when setting grade: " << e.what() << "." << std::endl;
+	}
+	std::cout << john << std::endl;
+	std::cout << "-- Setting grade to -1. --" << std::endl;
+	try
+	{
+		john.incr();
+	}
+	catch(std::exception &e)
+	{
+		std::cout << "Error when setting grade: " << e.what() << "." << std::endl;
+	}
+	std::cout << john << std::endl;
+	std::cout << "-- Creating a Bureaucrat with invalid grade --"<< std::endl;
+	try
+	{
+		Bureaucrat alice("Alice", 500);
+	}
+	catch(std::exception &e)
+	{
+		std::cout << "Error when creating Bureaucrat: " << e.what() << "." << std::endl;
+	}
+	return (0);
 }

@@ -4,6 +4,7 @@ class pony
 {
 	private:
 
+
 	public:
 
 	std::string color;

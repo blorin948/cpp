@@ -49,12 +49,12 @@ std::string Form::getName(void) const
 	return (this->_name);
 }
 
-const int Form::getGradeSign(void) const
+int Form::getGradeSign(void) const
 {
 	return (this->_gradSign);
 }
 
-const int Form::getGradeExec(void) const
+int Form::getGradeExec(void) const
 {
 	return (this->_gradExec);
 }
@@ -68,7 +68,9 @@ void Form::beSigned(Bureaucrat const b)
 {
 
 		if (b.getGrade() < this->_gradSign)
+		{
 			_sign = true;
+		}
 		else
 			throw GradeTooLowException();
 }

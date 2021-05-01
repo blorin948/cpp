@@ -20,6 +20,7 @@ class NinjaTrap : public ClapTrap
 	void ninjaShoebox(FragTrap const &c);
 	void ninjaShoebox(ScavTrap const &c);
 	void ninjaShoebox(NinjaTrap const &c);
+	void ninjaShoebox(ClapTrap const &c);
 
 	private :
 

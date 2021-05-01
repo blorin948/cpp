@@ -1,6 +1,6 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon& weap) : _weap(weap),  _name(name)
+HumanA::HumanA(std::string name, Weapon& weap) : _name(name), _weap(weap)
 {
 
 }

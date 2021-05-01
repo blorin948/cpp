@@ -13,6 +13,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(ScavTrap const &c)
 {
+	std::cout << "ScavTrap copy constructor called" << std::endl;
 	*this = c;
 }
 

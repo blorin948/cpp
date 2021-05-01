@@ -25,6 +25,7 @@ Fixed::Fixed(const int value)
 
 Fixed::Fixed(const float value)
 {
+	//this->_value = roundf(value);
 	this->_value = roundf(value * (1 << _rawbits));
 }
 
@@ -37,6 +38,7 @@ Fixed &Fixed::operator=(Fixed const &c)
 
 int Fixed::getRawBits(void) const
 {
+	//std::cout << "getRawBits called" << std::endl;
 	return (this->_value);
 }
 

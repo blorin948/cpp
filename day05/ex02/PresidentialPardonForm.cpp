@@ -17,6 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &c)
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm const &c)
 {
+	(void)c;
 	return (*this);
 }
 
@@ -28,5 +29,5 @@ PresidentialPardonForm::~PresidentialPardonForm()
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	checkGrade(executor);
-	std::cout << executor.getName() << " has been forgiven by Zafod Beeblebrox." << std::endl;
+	std::cout << getTarget() << " has been forgiven by Zafod Beeblebrox." << std::endl;
 }

@@ -10,7 +10,6 @@ class PlasmaRifle : public Aweapon
 
 	public :
 
-//	PlasmaRifle();
 	PlasmaRifle();
 	PlasmaRifle(PlasmaRifle const &c);
 	PlasmaRifle &operator=(PlasmaRifle const &c);

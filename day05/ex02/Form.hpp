@@ -28,8 +28,8 @@ class Form
 	Form(Form const &c);
 	Form &operator=(Form const &c);
 	virtual ~Form();
-	const int getGradeExec(void) const;
-	const int getGradeSign(void) const;
+	int getGradeExec(void) const;
+	int getGradeSign(void) const;
 	std::string getName(void) const;
 	bool isSigned(void) const;
 	void beSigned(Bureaucrat const b);

@@ -1,7 +1,7 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string n) : _name(n), _hp(100), _maxhp(100), _nrg(100)
-, _maxnrg(100), _lvl(1), _meleedmg(30), _rangedmg(20), _armor(5)
+FragTrap::FragTrap(std::string n) : _hp(100), _maxhp(100), _nrg(100)
+, _maxnrg(100), _lvl(1),  _name(n), _meleedmg(30), _rangedmg(20), _armor(5)
 {
 	std::cout << "FragTrap constructor of " << this->_name << " called" << std::endl;
 }
@@ -9,7 +9,7 @@ FragTrap::FragTrap(std::string n) : _name(n), _hp(100), _maxhp(100), _nrg(100)
 FragTrap::FragTrap(void) : _hp(100), _maxhp(100), _nrg(100)
 , _maxnrg(100), _lvl(1), _meleedmg(30), _rangedmg(20), _armor(5)
 {
-
+	std::cout << "Default FragTrap constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap()

@@ -14,7 +14,7 @@ Bureaucrat::Bureaucrat(void)
 
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &c)  : _name(c.getName())
+Bureaucrat::Bureaucrat(Bureaucrat const &c)
 {
 	*this = c;
 }
@@ -81,8 +81,6 @@ void Bureaucrat::signForm(Form &c)
 		std::cerr << this->_name << " can't sign " << c.getName()
 		<< " because " << e.what() << '\n';
 	}
-
-
 }
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &c)

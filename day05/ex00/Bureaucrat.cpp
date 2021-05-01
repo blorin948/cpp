@@ -5,7 +5,7 @@ Bureaucrat::Bureaucrat(std::string n, int gr) : _name(n), _grade(gr)
 	if (gr < 1)
 		throw Bureaucrat::GradeTooHighException();
 	if (gr > 150)
-			 Bureaucrat::GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 }
 
 Bureaucrat::Bureaucrat(void)
@@ -41,7 +41,7 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 
 std::string Bureaucrat::getName(void) const
 {
-	return (_name);
+	return (this->_name);
 }
 
 int Bureaucrat::getGrade(void) const

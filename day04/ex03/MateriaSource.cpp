@@ -2,7 +2,10 @@
 
 MateriaSource::MateriaSource(void) : _count(0)
 {
-	_save = NULL;
+	_save[0] = NULL;
+	_save[1] = NULL;
+	_save[2] = NULL;
+	_save[3] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &c)
@@ -12,12 +15,41 @@ MateriaSource::MateriaSource(MateriaSource const &c)
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &c)
 {
+	deleteAll();
+	int i = 0;
+	while (i < c._count)
+	{
+		_save[i] = c.getAmateria(i)->clone();
+		i++;
+	}
 	return (*this);
 }
 
 MateriaSource::~MateriaSource()
 {
+	deleteAll();
+}
 
+Amateria *MateriaSource::getAmateria(int idx) const
+{
+	if (idx < _count)
+	{
+		return (_save[idx]);
+	}
+	else
+		return (NULL);
+	
+}
+
+void MateriaSource::deleteAll(void)
+{
+	int i = 0;
+	while (i < _count)
+	{
+		delete _save[i];
+		i++;
+	}
+	_count = 0;
 }
 
 void MateriaSource::learnMateria(Amateria *c)
@@ -27,6 +59,11 @@ void MateriaSource::learnMateria(Amateria *c)
 		_save[_count] = c;
 		_count++;
 	}
+	else
+	{
+		std::cout << "Could not learn this Materia, inventory is full" << std::endl;
+	}
+	
 }
 
 Amateria *MateriaSource::createMateria(std::string const & type)

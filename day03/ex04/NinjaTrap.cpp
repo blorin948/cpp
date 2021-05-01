@@ -37,15 +37,18 @@ std::cout << "NinjaTrap destructor of " << this->_name << " called" << std::endl
 
 void NinjaTrap::ninjaShoebox(FragTrap const &c)
 {
+	(void)c;
 	std::cout << "FragTrap ninjaShoebox of " << this->_name << " called" << std::endl;
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap const &c)
 {
+	(void)c;
 	std::cout << "ScavTrap ninjaShoebox of " << this->_name << " called" << std::endl;
 }
 
 void NinjaTrap::ninjaShoebox(NinjaTrap const &c)
 {
+	(void)c;
 	std::cout << "NinjaTrap ninjaShoebox of " << this->_name << " called" << std::endl;
 }

@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string n) : _name(n), _hp(100), _maxhp(100), _nrg(50)
-, _maxnrg(50), _lvl(1), _meleedmg(20), _rangedmg(15), _armor(3)
+ScavTrap::ScavTrap(std::string n) :  _hp(100), _maxhp(100), _nrg(50)
+, _maxnrg(50), _lvl(1), _name(n), _meleedmg(20), _rangedmg(15), _armor(3)
 {
 	std::cout << "ScavTrap constructor of " << this->_name << " called" << std::endl;
 }

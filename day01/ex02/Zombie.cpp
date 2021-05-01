@@ -1,6 +1,6 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) : _type(type), _name(name)
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type)
 {
 	std::cout << "creation du zombie " << this->_name << std::endl;
 }

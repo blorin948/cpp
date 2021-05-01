@@ -1,8 +1,9 @@
 #include "pony.hpp"
 
-pony::pony(int nblegs, std::string colorPoney): color(colorPoney), legs(nblegs)
+pony::pony(int nblegs, std::string colorPoney): legs(nblegs), color(colorPoney)
 {
 	std::cout << "Creation d'un poney" << std::endl;
+
 }
 
 pony::~pony()

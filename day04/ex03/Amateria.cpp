@@ -17,6 +17,7 @@ Amateria::Amateria(Amateria const &c)
 
 Amateria &Amateria::operator=(Amateria const &c)
 {
+	_xp = c._xp;
 	return (*this);
 }
 
@@ -37,5 +38,6 @@ std::string const &Amateria::getType() const
 
 void Amateria::use(ICharacter& target)
 {
+	(void)target;
 	_xp += 10;
 }

@@ -18,7 +18,7 @@ bob.challengeNewcomer();
 bob.challengeNewcomer();
 bob.challengeNewcomer();
 
-	FragTrap bob2("joseph");
+	FragTrap bob2("josephRoi");
 	bob2.meleeAttack("Patrick");
 	bob2.rangedAttack("Clark");
 	bob2.takeDamage(50);

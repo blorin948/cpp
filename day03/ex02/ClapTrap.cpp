@@ -18,6 +18,7 @@ ClapTrap::ClapTrap(void)
 
 ClapTrap::ClapTrap(ClapTrap const &c)
 {
+	std::cout << "CLapTrap copy constructor called" << std::endl;
 	*this = c;
 }
 

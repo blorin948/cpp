@@ -15,7 +15,9 @@ int main()
 	Enemy* scorpion = new RadScorpion();
 	Aweapon* pr = new PlasmaRifle();
 	Aweapon* pf = new PowerFist();
+
 	std::cout << "-- Player is choosing a weapon... --" << std::endl;
+
 	player->equip(pr);
 	std::cout << *player;
 	player->equip(pf);

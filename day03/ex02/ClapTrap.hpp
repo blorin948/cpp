@@ -30,7 +30,7 @@ class ClapTrap
 	std::string _name;
 	int _meleedmg;
 	int _rangedmg;
-	int _armor;
+	unsigned int _armor;
 };
 
 #endif

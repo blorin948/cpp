@@ -12,6 +12,7 @@ TacticalMarine::TacticalMarine(TacticalMarine const &c)
 
 TacticalMarine &TacticalMarine::operator=(TacticalMarine const &c)
 {
+	(void)c;
 	return (*this);
 }
 

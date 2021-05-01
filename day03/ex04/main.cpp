@@ -15,4 +15,16 @@ int main()
 	a.meleeAttack("slt");
 	ok.meleeAttack("slt");
 	boby.meleeAttack("e");
+
+
+
+std::cout << "\n\n\n\n";
+
+
+
+    SuperTrap st = SuperTrap("Alex Ezzeddine");
+    st.meleeAttack("Tuktuk");
+    st.rangedAttack("Putput");
+    st.ninjaShoebox(ok);
+    st.vaulthunter_dot_exe("Woopie");
 }

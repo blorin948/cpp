@@ -30,5 +30,5 @@ Amateria* Cure::clone() const
 void Cure::use(ICharacter& target)
 {
 	Amateria::use(target);
-	std::cout << "* heals NOM’s wounds *" << std::endl;
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }

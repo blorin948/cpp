@@ -1,6 +1,6 @@
 #include "Aweapon.hpp"
 
-Aweapon::Aweapon(std::string const & name, int apcost, int damage) : _name(name), _apcost(apcost), _dmg(damage)
+Aweapon::Aweapon(std::string const & name, int apcost, int damage) : _apcost(apcost), _dmg(damage), _name(name)
 {
 
 }

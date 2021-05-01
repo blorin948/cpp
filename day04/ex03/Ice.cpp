@@ -24,7 +24,7 @@ Ice::~Ice()
 void Ice::use(ICharacter& target)
 {
 	Amateria::use(target);
-	std::cout <<  "* shoots an ice bolt at NOM *" << std::endl;
+	std::cout <<  "* shoots an ice bolt at " <<  target.getName() << " *" << std::endl;
 }
 
 Amateria *Ice::clone() const
