@@ -17,16 +17,16 @@ class Array
 
 	Array(void) : _size(0)
 	{
-		_tab = new T();
+		_tab = NULL;
 	}
 	Array(unsigned int size) : _size(size)
 	{
 		_tab = new T[_size]();
 	}
-	T &operator[](int index);
+	T &operator[](unsigned int index);
 	Array(Array const &c)
 	{
-		int i = 0;
+	unsigned 	int i = 0;
 		_size = c.getSize();
 		_tab = new T[_size];
 		while (i < _size)
@@ -40,22 +40,29 @@ class Array
 	{
 		delete[] _tab;
 	}
-	int getSize(void) const;
-	void printT(int index) const
+	unsigned int getSize(void) const;
+	void printT() const
 	{
-		std::cout << _tab[index];
+		unsigned int i = 0;
+		if (this->_size == 0)
+		{
+
+			return ;
+		}
+		while (i < _size)
+			std::cout << _tab[i++] << std::endl;
 	}
 
 	private :
 
 	T *_tab;
-	int _size;
+	unsigned int _size;
 
 };
 
 
 template<typename T>
-int Array<T>::getSize(void) const
+unsigned int Array<T>::getSize(void) const
 {
 	return (this->_size);
 }
@@ -63,8 +70,9 @@ int Array<T>::getSize(void) const
 template<typename T>
 Array<T> &Array<T>::operator=(Array<T> const &c)
 {
+
 	delete[] _tab;
-	int i = 0;
+	unsigned int i = 0;
 	_tab = NULL;
 	_size = c._size;
 	_tab = new T[_size];
@@ -74,15 +82,16 @@ Array<T> &Array<T>::operator=(Array<T> const &c)
 		i++;
 	}
 	i = 0;
-
 	return (*this);
 }
 
 template <typename T>
-T &Array<T>::operator[](int index)
+T &Array<T>::operator[](unsigned int index)
 	{
-		if (index >= this->_size)
-			throw outOfSizeException();
+		if (index >= this->_size || index < 0)
+		{
+			throw Array::outOfSizeException();
+		}
 		return (_tab[index]);
 	}
 

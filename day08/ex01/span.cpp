@@ -22,11 +22,22 @@ span &span::operator=(span const &c)
 	return (*this);
 }
 
+int span::getnumber(void) const
+{
+	return (_n);
+}
+
+std::vector<int> span::getVec(void) const
+{
+	return (cont);
+}
+
 void span::addNumber(int number)
 {
 	if (cont.size() >= this->_n)
 		throw std::out_of_range("Class if already full.");
 	cont.push_back(number);
+	real_nbr++;
 }
 
 int span::shortestSpan(void)
@@ -59,13 +70,14 @@ int span::longestSpan(void)
 	return (abs(max - min));
 }
 
-void span::addNumber(unsigned int range, int number)
+void span::addNumber(unsigned int numbers, int value)
 {
-	while (range > 0)
-	{
-		addNumber(number);
-		range--;
-	}
+//	std::cout << numbers << std::endl << cont.size() << std::endl << value << std::endl; 
+	if (numbers + cont.size() > _n)
+		throw std::out_of_range("Class is already full");
+	std::vector<int>::iterator begin;
+	begin = cont.begin();
+	cont.insert(begin, numbers, value);
 }
 
 span::~span()

@@ -13,51 +13,57 @@ class mutantstack : public std::stack<T>
 
 	public :
 
-	mutantstack()
-	{
-
-	}
-	mutantstack(mutantstack const &c)
-	{
-		*this = c;
-	}
-	mutantstack &operator=(mutantstack const &c)
-	{
-		return (*this);
-	}
-	~mutantstack()
-	{
-
-	}
-
-	typedef typename std::vector<T>::iterator iterator;
+	mutantstack();
+	mutantstack(mutantstack const &c);
+	mutantstack &operator=(mutantstack const &c);
+	~mutantstack();
+	/*typedef typename std::vector<T>::iterator iterator;
+	typedef typename std::vector<T>::const_iterator const_iterator;*/
+	typedef typename std::deque<T>::iterator iterator;
+		typedef typename std::deque<T>::const_iterator const_iterator;
 	iterator  begin(void)
 	{
-		return (_vect.begin());
+		return std::stack<T>::c.begin();
 	}
 	iterator  end(void)
 	{
-		return (_vect.end());
+		return std::stack<T>::c.end();
 	}
-	void push(T value)
+	const_iterator cbegin(void) const
 	{
-		_vect.push_back(value);
+		return std::stack<T>::c.begin();
 	}
-	void pop()
+	iterator  cend(void) const
 	{
-		_vect.pop_back();
-	}
-	T top()
-	{
-		return (_vect.back());
-	}
-	int size(void)
-	{
-		return (_vect.size());
+		return std::stack<T>::c.end();
 	}
 	private :
 
-	std::vector<T> _vect;
 };
+
+template <typename T>
+mutantstack<T>::mutantstack(void) : std::stack<T>()
+{
+	return ;
+}
+
+template <typename T>
+mutantstack<T>::~mutantstack()
+{ 
+	return ;
+}
+
+template <typename T>
+mutantstack<T>::mutantstack(mutantstack<T> const & c) : std::stack<T>(c)
+{ 
+	return ; 
+}
+
+template <typename T>
+mutantstack<T> & mutantstack<T>::operator=(mutantstack<T> const & c)
+{
+	(void)c;
+	return *this;
+}
 
 #endif

@@ -16,9 +16,9 @@ void Iter(T *tab, int size, void(*f)(T&))
 
 
 template<typename T>
-void inc(T type)
+void print(T &type)
 {
-	type+=1;
+	std::cout << type << std::endl;
 }
 
 #endif

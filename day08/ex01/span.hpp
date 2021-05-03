@@ -20,7 +20,9 @@ class span
 	void addNumber(int number);
 	int shortestSpan(void);
 	int longestSpan(void);
-	void addNumber(unsigned int range, int number);
+	void addNumber(unsigned int numbers, int value);
+	int getnumber(void) const;
+	std::vector<int> getVec(void) const;
 	~span();
 
 	private :
@@ -28,6 +30,7 @@ class span
 	span();
 	unsigned int _n;
 	std::vector<int> cont;
+	unsigned int real_nbr;
 };
 
 #endif
